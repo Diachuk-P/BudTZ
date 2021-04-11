@@ -1,23 +1,38 @@
 
 $red: #df0d0e;
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $red;
+}
 .container{
     max-width: 1200px !important;
 }
-a:link{
-color: white;
-text-decoration: none;
+body > a:link{
+    text-decoration: none;
+    color: #df0d0e;
+    transition: 1s ease all;
+}
+*{
+    font-family: 'Roboto',sans-serif;
 }
 a:hover{
     color: white;
 }
 .main-title{
-    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
+
+
 // HEADER
 
 .header{
-    margin: 3% 0;
+    margin: 1.5% 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,19 +55,24 @@ a:hover{
             font-size: 14px;
             outline: none;
             vertical-align: middle;
+            color: silver;
+            font-weight: 600;
+            opacity: 0.3;
         }
         .search{
             color: silver;
             font-size: 1.3em;
             margin-left: -35px;
+            opacity: 0.4;
         }
     }
     &__contacts{
+        font-size: 14px;
          a{
             font-weight: 600;
-            font-size: 18px;
+            font-size: 16px;
             color: $red;
-            
+            transition: 1s ease all;
             text-decoration: none;
         }
         a:hover{
@@ -68,14 +88,14 @@ a:hover{
             height: 17px;
             
             margin-right: 8px;
-            margin-top: 3px;
+            margin-top: 2px;
             vertical-align: middle;
         }
         a{
-            // font-size: 14px;
-            // transition: 1s ease all;
+            font-size: 14px;
             text-decoration: none;
             color: black;
+            transition: 0.5s ease all;
         }
         a:hover{
             transition: 1s ease all;
@@ -88,8 +108,7 @@ a:hover{
             height: 17px;
         }
         a{
-            // font-size: 14px;
-            // transition: 1s ease all;
+            font-size: 14px;
             text-decoration: none;
             color: black;
         }
@@ -116,6 +135,8 @@ a:hover{
     height: 53px;
     align-items: center;
     margin: 0;
+    padding: 0;
+    
     li{
         list-style-type: none;
     }
@@ -125,7 +146,7 @@ a:hover{
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.3px;
-        font-size: 16px;
+        font-size: 14px;
     }
     .main-menu{
         margin-right: 30px;
@@ -154,8 +175,60 @@ a:hover{
 // SLIDER
 
 .first-page{
-    height: 700px;
+    height: 950px;
     background-image: url(../img/carusel2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+    .title-slide{
+        font-size: 40px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        line-height: 110%;
+        margin-bottom: 20px;
+        text-shadow: 0 0 15px #161616;
+    }
+    .sub-title-slide p{
+        font-size: 25px;
+        line-height: 150%;
+        color: #fff;
+        text-shadow: 0 0 15px #161616;
+        text-transform: uppercase;
+    
+    }
+    .button-slide a{
+        cursor: pointer;
+        font-size: 15px ;
+        font-weight: 600 ;
+        line-height: 100% ;
+        letter-spacing: 1px ;
+        padding: 20px 25px ;
+        border-radius: 4px ;
+        color: #ffffff ;
+        display: inline-block ;
+        text-decoration: none;
+        background-color: #df0d0e ;
+        border: 3px solid #df0d0e;
+        text-transform: uppercase;
+        transition: 0.5s ease all;
+    }
+    .button-slide a:hover{
+        transition: 1s ease-out 0.5s;
+        border: 3px solid black;
+        
+        background-color: rgba(205, 214, 219, 0.3);
+    }
+}
+.second-page{
+    height: 950px;
+    background-image: url(../img/carusel1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,7 +268,7 @@ a:hover{
         background-color: #df0d0e ;
         border: 3px solid #df0d0e;
         text-transform: uppercase;
-        transition: all 1s ease 0.01s;
+        transition: 0.5s ease all;
     }
     .button-slide a:hover{
         transition: 1s ease-out 0.5s;
@@ -204,32 +277,65 @@ a:hover{
         background-color: rgba(205, 214, 219, 0.3);
     }
 }
+
 .carusel{
+    height: 950px;
+    position: relative;
     margin-bottom: 2%;
+    .carousel-indicators li{
+        position: absolute;
+        top: 250px;
+    
+        margin-bottom: 50px;
+        color: white
+    }
 }
 // CATEGORY
 
 .category{
-    width: 1300px;
+    width: 1200px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-    
+    margin-bottom: 2%;
     .style-category{
-        background-image: url(../img/bricklayer-worker-installing-brick-masonry-exterior-wall-with-trowel-putty-knife-ratio-10x8-proportions-jpg.jpg);
-        background-position: center;
-        background-size: cover;
+        // background-image: url(../img/bricklayer-worker-installing-brick-masonry-exterior-wall-with-trowel-putty-knife-ratio-10x8-proportions-jpg.jpg);
+        // background-position: center;
+        // background-size: cover;
         
         width: 31%;
         height: 300px;
-        margin-bottom: 2.5%;
-        padding-top: 10%;
-    .style-category:hover{
+        margin-bottom: 6%;
+        margin-top: 3%;
+        position: relative;
+        .category-img{
+            overflow: hidden;
+            width: 380px;
+            height: 350px;
+            
+        }
+        .category-img-addods{
+            transition: 1s;
+            width: 100%;
+            height: 100%;
+            
+        }
+        .category-img-addods:hover{
+            transform: scale(1.1);
+           
+        }
+        .style-category{
+            position: relative;
+        }
+        .style-category:hover{
         
         transition: all 1s ease-out;
         transform: scale(1.1);
-    }
+        }
         .category-title{
+            position: absolute;
+            top: 180px;
+            z-index: 1;
             width: 100%;
             padding: 15px 25px;
             font-weight: 600;
@@ -242,6 +348,9 @@ a:hover{
             text-shadow: 0 0 15px #000000;
         }
         .category-button a{
+            z-index: 4;
+            position: absolute;
+            margin-top: -100px;
             margin-left: 20px;
             cursor: pointer;
             font-size: 15px ;
@@ -256,12 +365,11 @@ a:hover{
             background-color: #df0d0e ;
             border: 3px solid #df0d0e;
             text-transform: uppercase;
-            transition: all 1s ease 0.01s;
+            transition: 0.5s ease all;
             }
             .category-button a:hover{
                 transition: 1s ease-out 0.5s;
                 border: 3px solid black;
-                
                 background-color: rgba(205, 214, 219, 0.3);
             }
         
@@ -270,17 +378,13 @@ a:hover{
 // SLIDER_CATEGORY
 
 .slider-category{
-    
     margin-bottom: 3%;
     display: flex;
-    // &__first-prod{
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
+    flex-wrap: wrap;
     .nth_prod{
         position: relative;
-        width: 290px;
-        height: 420px;
+        width: 300px;
+        height: 400px;
         padding: 15px 30px;
         display: flex;
         flex-direction: column;
@@ -303,7 +407,7 @@ a:hover{
 
     }
     &__link a{
-        width: 300px;
+        width: 310px;
         padding: 0 5px;
         color: black;
         display: block;
@@ -333,16 +437,22 @@ a:hover{
     &__sale{
         display: none;
     }
+    
+    // &__first-prod{
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
 }
 
 // GO_TO_CATALOG
 .flex_catalog_go{
 display: flex;
 height: 640px;
+margin-bottom: 2%;
 }
 .go-to-catalog{
     width: 50%;
-    padding: 50px;
+    padding: 50px 80px;
     background-color: black;
     color: white;
     display: flex;
@@ -365,7 +475,7 @@ height: 640px;
         opacity: 0.8;
     }
     &__button{
-        width: 250px;
+        width: 260px;
         margin-top: 6%;
         cursor: pointer;
         font-size: 15px ;
@@ -381,6 +491,13 @@ height: 640px;
         border: 2px solid #ffffff;
         text-transform: uppercase;
         transition: all 1s ease 0.01s;
+    }
+    &__button a{
+        color: white;
+        text-decoration: none;
+    }
+    &__button a:hover{
+        color: white;
     }
     &__button:hover{
         transition: ease-out 0.5s;
@@ -402,7 +519,9 @@ height: 640px;
     width: 1200px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2%;
     .nth_prod{
+        margin-top: 2%;
         position: relative;
         width: 290px;
         height: 420px;
@@ -420,8 +539,8 @@ height: 640px;
 
 // FOOTER
 footer{
-    background-color: black;
-    height: 500px;
+    background-color: #111111;
+    height: 330px;
 }
 .footer-menu{
     display: flex;
@@ -429,22 +548,41 @@ footer{
    
 }
 
-
+.margin_footer{
+    margin-bottom: 10px;
+}
 
 .footer{
-    padding-top: 80px;
+    display: flex;
+    padding-top: 50px;
     color: white;
-    &__menu-title{
-        font-size: 24px;
-        font-weight: bold;
-        margin:5px 0;
+    justify-content: space-between;
+    a{
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.3px;
+        font-size: 16px;
+       
     }
+    a:hover{
+        transition: 0.5s ease all;
+        color: silver;
+    }
+    &__menu-title{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    
     .vertical-menu{
         .ul-footer{
             padding: 0;
             li{
                 list-style-type: none;
                 padding: 0;
+                margin-bottom: 10px;
             }
             a{
                 color: white;
@@ -452,10 +590,88 @@ footer{
                 font-weight: 400;
                 line-height: 150%;
                 letter-spacing: 0.3px;
-                font-size: 20px;
+                font-size: 16px;
+               
             }
         }
         
     }
-    
+    &__social-networks{
+        margin-top: -10px;
+        margin-bottom: 10px;
+        a{
+            font-size: 24px;
+        }
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .red{
+        color: $red;
+    }
 }
+
+
+
+
+.sub-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    a{
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.3px;
+        font-size: 14px;
+       
+    }
+    a:hover{
+        transition: 0.5s ease all;
+        color: silver;
+    }
+    &__text{
+        color: silver;
+        font-size: 18px;
+    }
+    i{
+        color: white;
+        font-size: 20px;
+    }
+    a{
+        color: white;
+    }
+    a:hover{
+        color: white;
+    }
+
+    &__currency{
+        .sub-footer-link-uah::after{
+            font-size: 12px;
+            content: "|";
+            font-weight: bold;
+            padding-left: 5px;
+            vertical-align: text-bottom;
+        }
+    }
+    &__language{
+        .sub-footer-link-border::before{
+            font-size: 12px;
+            content: "|";
+            font-weight: bold;
+            padding-right: 5px;
+            vertical-align: text-bottom;
+        }
+        .sub-footer-link-border::after{
+            font-size: 12px;
+            font-weight: bold;
+            content: "|";
+            padding-left: 5px;
+            vertical-align: text-bottom;
+        }
+        
+    }
+}
+

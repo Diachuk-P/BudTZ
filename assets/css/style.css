@@ -1,10 +1,25 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #df0d0e;
+}
+
 .container {
   max-width: 1200px !important;
 }
 
-a:link {
-  color: white;
+body > a:link {
   text-decoration: none;
+  color: #df0d0e;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+* {
+  font-family: 'Roboto',sans-serif;
 }
 
 a:hover {
@@ -12,11 +27,13 @@ a:hover {
 }
 
 .main-title {
-  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .header {
-  margin: 3% 0;
+  margin: 1.5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,18 +68,28 @@ a:hover {
   font-size: 14px;
   outline: none;
   vertical-align: middle;
+  color: silver;
+  font-weight: 600;
+  opacity: 0.3;
 }
 
 .header__input .search {
   color: silver;
   font-size: 1.3em;
   margin-left: -35px;
+  opacity: 0.4;
+}
+
+.header__contacts {
+  font-size: 14px;
 }
 
 .header__contacts a {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   color: #df0d0e;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
   text-decoration: none;
 }
 
@@ -82,13 +109,16 @@ a:hover {
   width: 17px;
   height: 17px;
   margin-right: 8px;
-  margin-top: 3px;
+  margin-top: 2px;
   vertical-align: middle;
 }
 
 .header__sign-up a {
+  font-size: 14px;
   text-decoration: none;
   color: black;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .header__sign-up a:hover {
@@ -103,6 +133,7 @@ a:hover {
 }
 
 .header__wishlist a {
+  font-size: 14px;
   text-decoration: none;
   color: black;
 }
@@ -131,6 +162,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .menu li {
@@ -143,7 +175,7 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .menu .main-menu {
@@ -179,7 +211,7 @@ a:hover {
 }
 
 .first-page {
-  height: 700px;
+  height: 950px;
   background-image: url(../img/carusel2.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -197,6 +229,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 5%;
 }
 
 .first-page .title-slide {
@@ -232,8 +265,8 @@ a:hover {
   background-color: #df0d0e;
   border: 3px solid #df0d0e;
   text-transform: uppercase;
-  -webkit-transition: all 1s ease 0.01s;
-  transition: all 1s ease 0.01s;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .first-page .button-slide a:hover {
@@ -243,12 +276,86 @@ a:hover {
   background-color: rgba(205, 214, 219, 0.3);
 }
 
+.second-page {
+  height: 950px;
+  background-image: url(../img/carusel1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.second-page .title-slide {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  line-height: 110%;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #161616;
+}
+
+.second-page .sub-title-slide p {
+  font-size: 25px;
+  line-height: 150%;
+  color: #fff;
+  text-shadow: 0 0 15px #161616;
+  text-transform: uppercase;
+}
+
+.second-page .button-slide a {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1px;
+  padding: 20px 25px;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #df0d0e;
+  border: 3px solid #df0d0e;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.second-page .button-slide a:hover {
+  -webkit-transition: 1s ease-out 0.5s;
+  transition: 1s ease-out 0.5s;
+  border: 3px solid black;
+  background-color: rgba(205, 214, 219, 0.3);
+}
+
 .carusel {
+  height: 950px;
+  position: relative;
   margin-bottom: 2%;
 }
 
+.carusel .carousel-indicators li {
+  position: absolute;
+  top: 250px;
+  margin-bottom: 50px;
+  color: white;
+}
+
 .category {
-  width: 1300px;
+  width: 1200px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   display: -webkit-box;
@@ -256,16 +363,37 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2%;
 }
 
 .category .style-category {
-  background-image: url(../img/bricklayer-worker-installing-brick-masonry-exterior-wall-with-trowel-putty-knife-ratio-10x8-proportions-jpg.jpg);
-  background-position: center;
-  background-size: cover;
   width: 31%;
   height: 300px;
-  margin-bottom: 2.5%;
-  padding-top: 10%;
+  margin-bottom: 6%;
+  margin-top: 3%;
+  position: relative;
+}
+
+.category .style-category .category-img {
+  overflow: hidden;
+  width: 380px;
+  height: 350px;
+}
+
+.category .style-category .category-img-addods {
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+}
+
+.category .style-category .category-img-addods:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.category .style-category .style-category {
+  position: relative;
 }
 
 .category .style-category .style-category:hover {
@@ -276,6 +404,9 @@ a:hover {
 }
 
 .category .style-category .category-title {
+  position: absolute;
+  top: 180px;
+  z-index: 1;
   width: 100%;
   padding: 15px 25px;
   font-weight: 600;
@@ -289,6 +420,9 @@ a:hover {
 }
 
 .category .style-category .category-button a {
+  z-index: 4;
+  position: absolute;
+  margin-top: -100px;
   margin-left: 20px;
   cursor: pointer;
   font-size: 15px;
@@ -303,8 +437,8 @@ a:hover {
   background-color: #df0d0e;
   border: 3px solid #df0d0e;
   text-transform: uppercase;
-  -webkit-transition: all 1s ease 0.01s;
-  transition: all 1s ease 0.01s;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .category .style-category .category-button a:hover {
@@ -319,12 +453,14 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .slider-category .nth_prod {
   position: relative;
-  width: 290px;
-  height: 420px;
+  width: 300px;
+  height: 400px;
   padding: 15px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,7 +495,7 @@ a:hover {
 }
 
 .slider-category__link a {
-  width: 300px;
+  width: 310px;
   padding: 0 5px;
   color: black;
   display: block;
@@ -400,11 +536,12 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   height: 640px;
+  margin-bottom: 2%;
 }
 
 .go-to-catalog {
   width: 50%;
-  padding: 50px;
+  padding: 50px 80px;
   background-color: black;
   color: white;
   display: -webkit-box;
@@ -439,7 +576,7 @@ a:hover {
 }
 
 .go-to-catalog__button {
-  width: 250px;
+  width: 260px;
   margin-top: 6%;
   cursor: pointer;
   font-size: 15px;
@@ -456,6 +593,15 @@ a:hover {
   text-transform: uppercase;
   -webkit-transition: all 1s ease 0.01s;
   transition: all 1s ease 0.01s;
+}
+
+.go-to-catalog__button a {
+  color: white;
+  text-decoration: none;
+}
+
+.go-to-catalog__button a:hover {
+  color: white;
 }
 
 .go-to-catalog__button:hover {
@@ -481,9 +627,11 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2%;
 }
 
 .special-propositions__product .nth_prod {
+  margin-top: 2%;
   position: relative;
   width: 290px;
   height: 420px;
@@ -509,8 +657,8 @@ a:hover {
 }
 
 footer {
-  background-color: black;
-  height: 500px;
+  background-color: #111111;
+  height: 330px;
 }
 
 .footer-menu {
@@ -523,15 +671,40 @@ footer {
           flex-direction: column;
 }
 
+.margin_footer {
+  margin-bottom: 10px;
+}
+
 .footer {
-  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
   color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+}
+
+.footer a:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  color: silver;
 }
 
 .footer__menu-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 5px 0;
+  margin-bottom: 15px;
 }
 
 .footer .vertical-menu .ul-footer {
@@ -541,6 +714,7 @@ footer {
 .footer .vertical-menu .ul-footer li {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 .footer .vertical-menu .ul-footer a {
@@ -549,6 +723,94 @@ footer {
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.3px;
+  font-size: 16px;
+}
+
+.footer__social-networks {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer__social-networks a {
+  font-size: 24px;
+}
+
+.footer .red {
+  color: #df0d0e;
+}
+
+.sub-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+.sub-footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+.sub-footer a:hover {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  color: silver;
+}
+
+.sub-footer__text {
+  color: silver;
+  font-size: 18px;
+}
+
+.sub-footer i {
+  color: white;
   font-size: 20px;
+}
+
+.sub-footer a {
+  color: white;
+}
+
+.sub-footer a:hover {
+  color: white;
+}
+
+.sub-footer__currency .sub-footer-link-uah::after {
+  font-size: 12px;
+  content: "|";
+  font-weight: bold;
+  padding-left: 5px;
+  vertical-align: text-bottom;
+}
+
+.sub-footer__language .sub-footer-link-border::before {
+  font-size: 12px;
+  content: "|";
+  font-weight: bold;
+  padding-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.sub-footer__language .sub-footer-link-border::after {
+  font-size: 12px;
+  font-weight: bold;
+  content: "|";
+  padding-left: 5px;
+  vertical-align: text-bottom;
 }
 /*# sourceMappingURL=style.css.map */
