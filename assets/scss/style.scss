@@ -529,7 +529,7 @@ margin-bottom: 2%;
         // padding-top: 2%;
         position: relative;
         width: 290px;
-        height: 450px;
+        height: 410px;
         padding: 15px 25px;
         display: flex;
         flex-direction: column;
@@ -538,12 +538,11 @@ margin-bottom: 2%;
     }
     .nth_prod:hover{
         z-index: 6;
-       
         box-shadow: 0px 0px 10px 10px rgba($color: silver, $alpha: 0.5);
     }
     .nth_prod:hover > .slider-category__link-buy{
         display: block;
-       
+        box-shadow: 0px 5px 10px 10px rgba($color: silver, $alpha: 0.5);
     }
 }
 .slider-category__link-buy{
