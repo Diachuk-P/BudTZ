@@ -25,14 +25,16 @@
   color: #fff;
   text-align: center;
   opacity: 0.5;
-  height: 50px;
+  height: 40px;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, .5);
+  border-radius: 20px;
 }
 
 .slider__control_show {
-  border: 5px solid black;
+  
   display: flex;
+
 }
 
 .slider__control:hover,
@@ -44,11 +46,14 @@
 }
 
 .slider__control_left {
-  left: 0px;
+  bottom: 50px;
+  left: 101%;
+  position: absolute;
+  z-index: 5;
 }
 
 .slider__control_right {
-  right: 20px;
+  right: 5px;
 }
 
 .slider__control::before {

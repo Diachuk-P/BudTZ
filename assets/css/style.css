@@ -73,6 +73,11 @@ a:hover {
   opacity: 0.3;
 }
 
+.header__input .input-header:active, .header__input :focus {
+  color: black;
+  opacity: 1;
+}
+
 .header__input .search {
   color: silver;
   font-size: 1.3em;
@@ -278,10 +283,12 @@ a:hover {
 
 .second-page {
   height: 950px;
+  padding-bottom: 10%;
   background-image: url(../img/carusel1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,15 +375,15 @@ a:hover {
 
 .category .style-category {
   width: 31%;
-  height: 300px;
-  margin-bottom: 6%;
+  height: 350px;
+  margin-bottom: 3%;
   margin-top: 3%;
   position: relative;
 }
 
 .category .style-category .category-img {
   overflow: hidden;
-  width: 380px;
+  max-width: 380px;
   height: 350px;
 }
 
@@ -459,9 +466,8 @@ a:hover {
 
 .slider-category .nth_prod {
   position: relative;
-  width: 300px;
-  height: 400px;
-  padding: 15px 30px;
+  width: 290px;
+  padding: 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,8 +484,8 @@ a:hover {
 }
 
 .slider-category .nth_prod:hover {
-  -webkit-box-shadow: 0 0px 10px 10px rgba(192, 192, 192, 0.5);
-          box-shadow: 0 0px 10px 10px rgba(192, 192, 192, 0.5);
+  -webkit-box-shadow: 0 0px 5px 5px rgba(192, 192, 192, 0.5);
+          box-shadow: 0 0px 5px 5px rgba(192, 192, 192, 0.5);
 }
 
 .slider-category__like {
@@ -622,19 +628,20 @@ a:hover {
 
 .special-propositions__product {
   width: 1200px;
+  height: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 2%;
+  margin-bottom: 3.5%;
 }
 
 .special-propositions__product .nth_prod {
-  margin-top: 2%;
+  z-index: 5;
   position: relative;
   width: 290px;
-  height: 420px;
+  height: 450px;
   padding: 15px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -652,8 +659,41 @@ a:hover {
 }
 
 .special-propositions__product .nth_prod:hover {
-  -webkit-box-shadow: 0 0px 10px 10px rgba(192, 192, 192, 0.5);
-          box-shadow: 0 0px 10px 10px rgba(192, 192, 192, 0.5);
+  z-index: 6;
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(192, 192, 192, 0.5);
+          box-shadow: 0px 0px 10px 10px rgba(192, 192, 192, 0.5);
+}
+
+.special-propositions__product .nth_prod:hover > .slider-category__link-buy {
+  display: block;
+}
+
+.slider-category__link-buy {
+  position: absolute;
+  bottom: -40px;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  margin-right: unset;
+  padding: 10px 30px;
+  text-transform: unset;
+  letter-spacing: unset;
+  border-radius: 0px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+  background-color: #df0d0e;
+  text-align: center;
+}
+
+.slider-category__link-buy a {
+  color: white;
+  text-decoration: none;
+}
+
+.slider-category__link-buy a:hover {
+  color: white;
 }
 
 footer {
@@ -707,6 +747,14 @@ footer {
   margin-bottom: 15px;
 }
 
+.footer__contacts-text {
+  color: #c1c1c1;
+}
+
+.footer__contacts-text-mail {
+  color: #c1c1c1;
+}
+
 .footer .vertical-menu .ul-footer {
   padding: 0;
 }
@@ -742,6 +790,10 @@ footer {
 
 .footer .red {
   color: #df0d0e;
+}
+
+.footer__card {
+  font-size: 24px;
 }
 
 .sub-footer {
@@ -791,26 +843,26 @@ footer {
 }
 
 .sub-footer__currency .sub-footer-link-uah::after {
-  font-size: 12px;
+  font-size: 13px;
   content: "|";
   font-weight: bold;
   padding-left: 5px;
-  vertical-align: text-bottom;
+  vertical-align: unset;
 }
 
 .sub-footer__language .sub-footer-link-border::before {
-  font-size: 12px;
+  font-size: 13px;
   content: "|";
   font-weight: bold;
   padding-right: 5px;
-  vertical-align: text-bottom;
+  vertical-align: unset;
 }
 
 .sub-footer__language .sub-footer-link-border::after {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   content: "|";
   padding-left: 5px;
-  vertical-align: text-bottom;
+  vertical-align: unset;
 }
 /*# sourceMappingURL=style.css.map */

@@ -59,6 +59,10 @@ a:hover{
             font-weight: 600;
             opacity: 0.3;
         }
+        .input-header:active, :focus{
+            color: black;
+            opacity: 1;
+        }
         .search{
             color: silver;
             font-size: 1.3em;
@@ -228,10 +232,12 @@ a:hover{
 }
 .second-page{
     height: 950px;
+    padding-bottom: 10%;
     background-image: url(../img/carusel1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y:-5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,19 +304,15 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2%;
-    .style-category{
-        // background-image: url(../img/bricklayer-worker-installing-brick-masonry-exterior-wall-with-trowel-putty-knife-ratio-10x8-proportions-jpg.jpg);
-        // background-position: center;
-        // background-size: cover;
-        
+    .style-category{  
         width: 31%;
-        height: 300px;
-        margin-bottom: 6%;
+        height: 350px;
+        margin-bottom: 3%;
         margin-top: 3%;
         position: relative;
         .category-img{
             overflow: hidden;
-            width: 380px;
+            max-width: 380px;
             height: 350px;
             
         }
@@ -383,16 +385,17 @@ a:hover{
     flex-wrap: wrap;
     .nth_prod{
         position: relative;
-        width: 300px;
-        height: 400px;
-        padding: 15px 30px;
+        width: 290px;
+        // height: 400px;
+        padding: 20px 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        
     }
     .nth_prod:hover{
-        box-shadow: 0 0px 10px 10px rgba($color: silver, $alpha: 0.5);
+        box-shadow: 0 0px 5px 5px rgba($color: silver, $alpha: 0.5);
     }
     
     &__like{
@@ -517,14 +520,16 @@ margin-bottom: 2%;
 // SPECIAL-PROPOSITIONS
 .special-propositions__product{
     width: 1200px;
+    height: 900px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2%;
+    margin-bottom: 3.5%;
     .nth_prod{
-        margin-top: 2%;
+        z-index: 5;
+        // padding-top: 2%;
         position: relative;
         width: 290px;
-        height: 420px;
+        height: 450px;
         padding: 15px 25px;
         display: flex;
         flex-direction: column;
@@ -532,11 +537,38 @@ margin-bottom: 2%;
         align-items: center;
     }
     .nth_prod:hover{
-        box-shadow: 0 0px 10px 10px rgba($color: silver, $alpha: 0.5);
+        z-index: 6;
+       
+        box-shadow: 0px 0px 10px 10px rgba($color: silver, $alpha: 0.5);
+    }
+    .nth_prod:hover > .slider-category__link-buy{
+        display: block;
+       
     }
 }
-
-
+.slider-category__link-buy{
+    position: absolute;
+    bottom: -40px;
+    z-index: 5;
+    display: none;
+    width: 100%;
+    transition: 1s ease all;
+    margin-right: unset ;
+    padding: 10px 30px;
+    text-transform: unset ;
+    letter-spacing: unset ;
+    border-radius: 0px ;
+    transition: 0.5s linear;
+    background-color: $red;
+    text-align: center;
+}
+.slider-category__link-buy a{
+    color: white;
+    text-decoration: none;
+}
+.slider-category__link-buy a:hover{
+    color: white;
+}
 // FOOTER
 footer{
     background-color: #111111;
@@ -575,7 +607,12 @@ footer{
         font-weight: bold;
         margin-bottom: 15px;
     }
-    
+    &__contacts-text{
+        color: #c1c1c1;
+    }
+    &__contacts-text-mail{
+        color: #c1c1c1;
+    }
     .vertical-menu{
         .ul-footer{
             padding: 0;
@@ -606,11 +643,17 @@ footer{
         justify-content: space-around;
         
     }
+    
+        
+    
+    
     .red{
         color: $red;
     }
 }
-
+.footer__card{
+    font-size: 24px;
+}
 
 
 
@@ -649,27 +692,27 @@ footer{
 
     &__currency{
         .sub-footer-link-uah::after{
-            font-size: 12px;
+            font-size: 13px;
             content: "|";
             font-weight: bold;
             padding-left: 5px;
-            vertical-align: text-bottom;
+            vertical-align: unset;
         }
     }
     &__language{
         .sub-footer-link-border::before{
-            font-size: 12px;
+            font-size: 13px;
             content: "|";
             font-weight: bold;
             padding-right: 5px;
-            vertical-align: text-bottom;
+            vertical-align: unset;
         }
         .sub-footer-link-border::after{
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
             content: "|";
             padding-left: 5px;
-            vertical-align: text-bottom;
+            vertical-align: unset;
         }
         
     }

@@ -21,7 +21,7 @@ var multiItemSlider = (function () {
 
     var position = {
       getMin: 0,
-      getMax: _items.length - 4
+      getMax: _items.length - 4.5
     };
 
     var _transformItem = function (direction) {
